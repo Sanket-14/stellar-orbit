@@ -1,0 +1,14 @@
+<div class="auth-overlay" (click)="onClose.emit()">
+    <div class="auth-card glass" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="onClose.emit()">&times;</button>
+        <h2>Create <span class="capitalize">{{ registrationType }}</span> Account</h2>
+        <p>Start your journey with Stellar Bank today.</p>
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" [(ngModel)]="fullName" placeholder="John Doe" autocomplete="off">
+        </div>
+
+        <button class="btn-primary" (click)="register()">Complete Registration</button>
+    </div>
+</div>

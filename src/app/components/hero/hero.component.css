@@ -1,0 +1,234 @@
+.hero-split {
+    display: flex;
+    min-height: 80vh;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.hero-left {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+.hero-right {
+    flex: 0 0 65%;
+    /* Adjusted for gap */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-box {
+    width: 100%;
+}
+
+.auth-box h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.auth-box p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-glass);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border-glass);
+}
+
+.divider span {
+    position: relative;
+    background: var(--bg-color);
+    padding: 0 10px;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+}
+
+/* Right Side Showcase */
+.glow-text {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.showcase-desc {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.cards-scroller {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: none;
+}
+
+.cards-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.showcase-card {
+    flex: 0 0 300px;
+    height: 180px;
+    transition: transform 0.3s;
+}
+
+.showcase-card:hover {
+    transform: translateY(-10px) rotate(-2deg);
+}
+
+.showcase-card .card-inner {
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    border-radius: 4px;
+}
+
+.card-type {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.card-feature {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+.prestige .card-inner {
+    background: linear-gradient(135deg, rgba(80, 80, 80, 0.4), rgba(0, 0, 0, 0.6));
+}
+
+.neon .card-inner {
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(112, 0, 255, 0.2));
+}
+
+.classic .card-inner {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Info Section */
+.info-section {
+    padding: 6rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.info-card {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .hero-split {
+        flex-direction: column;
+    }
+
+    .hero-left,
+    .hero-right {
+        flex: 1 1 auto;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

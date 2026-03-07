@@ -1,0 +1,57 @@
+.payment-container {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+select,
+input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    padding: 0.6rem;
+    border-radius: 6px;
+    color: white;
+    outline: none;
+}
+
+.btn-primary {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.status-msg {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.error {
+    color: #ff4b2b;
+}
+
+.success {
+    color: var(--primary-color);
+}

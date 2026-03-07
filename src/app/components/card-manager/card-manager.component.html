@@ -1,0 +1,30 @@
+<div class="card-manager">
+    <div class="section-header">
+        <h3>Your Cards</h3>
+        <button class="btn-primary" (click)="issueCard()">Issue Virtual Card</button>
+    </div>
+
+    <div class="cards-grid">
+        <div *ngFor="let card of cards" class="bank-card" [ngClass]="card.type">
+            <div class="card-inner glass">
+                <div class="chip"></div>
+                <div class="number">{{ card.cardNumber }}</div>
+                <div class="details">
+                    <div class="label-group">
+                        <span>EXPIRY</span>
+                        <p>{{ card.expiry }}</p>
+                    </div>
+                    <div class="label-group text-right">
+                        <span>CVV</span>
+                        <p>***</p>
+                    </div>
+                </div>
+                <div class="card-brand">STELLAR</div>
+            </div>
+        </div>
+
+        <div *ngIf="cards.length === 0" class="empty-state glass">
+            <p>No cards issued yet. Click "Issue Virtual Card" to begin.</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{
+    "id": "user_123",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "accountType": "Premium",
+    "joinedDate": "2023-10-15",
+    "preferences": {
+        "currency": "USD",
+        "notifications": true,
+        "theme": "dark"
+    }
+}

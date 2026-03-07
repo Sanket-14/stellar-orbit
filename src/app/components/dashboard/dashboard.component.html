@@ -1,0 +1,38 @@
+<div class="dashboard-container" *ngIf="user()">
+    <header class="dashboard-header glass">
+        <div class="user-info">
+            <h2>Welcome, {{ user()?.name }}</h2>
+            <span class="badge" [ngClass]="user()?.type">{{ user()?.type }}</span>
+        </div>
+        <div class="balance-card">
+            <span class="label">Total Balance</span>
+            <h1 class="amount">$ {{ user()?.balance?.toLocaleString() }}</h1>
+        </div>
+        <button class="logout-btn" (click)="logout()">Logout</button>
+    </header>
+
+    <main class="dashboard-content">
+        <div class="left-col">
+            <app-card-manager [accountId]="user()!.id" [cards]="userCards()"></app-card-manager>
+            <app-payment [cards]="userCards()"></app-payment>
+        </div>
+
+        <section class="transactions-section glass">
+            <h3>Recent Transactions</h3>
+            <div class="tx-list">
+                <div *ngFor="let tx of recentTransactions()" class="tx-item">
+                    <div class="tx-info">
+                        <p class="merchant">{{ tx.merchant }}</p>
+                        <span class="date">{{ tx.timestamp | date:'short' }}</span>
+                    </div>
+                    <div class="tx-amount negative">
+                        - $ {{ tx.amount }}
+                    </div>
+                </div>
+                <div *ngIf="recentTransactions().length === 0" class="empty-tx">
+                    No recent transactions.
+                </div>
+            </div>
+        </section>
+    </main>
+</div>

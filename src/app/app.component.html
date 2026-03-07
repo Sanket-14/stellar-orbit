@@ -1,0 +1,30 @@
+<div class="app-wrapper">
+    <nav class="glass main-nav">
+        <div class="logo">STELLAR<span>BANK</span></div>
+        <div class="nav-links">
+            <button class="nav-btn" (click)="scrollTo('services')">Services</button>
+            <a routerLink="/api-demo" class="nav-btn">API Demo</a>
+            <button class="nav-btn" (click)="startRegistration('customer')">Register</button>
+            <button class="nav-btn login-btn" (click)="showAuth = true">Log In</button>
+        </div>
+    </nav>
+
+    <app-hero *ngIf="!currentUser()" (onLogin)="onLogin($event)" (onRegister)="startRegistration($event)">
+    </app-hero>
+
+    <app-dashboard *ngIf="currentUser()"></app-dashboard>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">STELLAR<span>BANK</span></div>
+                <p>The next generation of digital finance.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stellar Bank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <router-outlet></router-outlet>
+</div>

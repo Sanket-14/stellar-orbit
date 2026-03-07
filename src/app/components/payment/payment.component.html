@@ -1,0 +1,33 @@
+<div class="payment-container glass">
+    <h3>Quick Payment Simulation</h3>
+    <p class="desc">Simulate a purchase using one of your active cards.</p>
+
+    <div class="form-group">
+        <label>Select Card</label>
+        <select [(ngModel)]="selectedCardId">
+            <option value="" disabled selected>Choose a card</option>
+            <option *ngFor="let card of cards" [value]="card.id">
+                Card ending in {{ card.cardNumber.slice(-4) }}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>Merchant</label>
+            <input type="text" [(ngModel)]="merchant" placeholder="Amazon, Netflix...">
+        </div>
+        <div class="form-group">
+            <label>Amount ($)</label>
+            <input type="number" [(ngModel)]="amount" placeholder="0.00">
+        </div>
+    </div>
+
+    <button class="btn-primary" [disabled]="!isValid()" (click)="pay()">
+        {{ isProcessing ? 'Processing...' : 'Pay Now' }}
+    </button>
+
+    <p *ngIf="message" class="status-msg" [ngClass]="messageType">
+        {{ message }}
+    </p>
+</div>

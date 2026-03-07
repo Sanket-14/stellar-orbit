@@ -1,0 +1,95 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.dashboard-header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--primary-color);
+    color: black;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+.badge.staff {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.balance-card .label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.balance-card .amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid var(--border-glass);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.transactions-section {
+    padding: 1.5rem;
+}
+
+.tx-list {
+    margin-top: 1rem;
+}
+
+.tx-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.merchant {
+    font-weight: 600;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.negative {
+    color: #ff4b2b;
+}
+
+.empty-tx {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+}

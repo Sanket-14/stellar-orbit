@@ -1,0 +1,89 @@
+<section class="hero-split">
+    <!-- Left Side: Login Form (30%) -->
+    <div class="hero-left glass">
+        <div class="auth-box">
+            <h2>Welcome Back</h2>
+            <p>Log in to manage your stellar accounts.</p>
+
+            <div class="form-group">
+                <label>Account Holder Name</label>
+                <input type="text" [(ngModel)]="loginName" placeholder="Enter your name">
+            </div>
+
+            <div class="selection-group">
+                <label>Account Type</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="type" [(ngModel)]="loginType" value="customer">
+                        Customer
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="type" [(ngModel)]="loginType" value="staff">
+                        Staff
+                    </label>
+                </div>
+            </div>
+
+            <button class="btn-primary full-width" (click)="login()">Access Portal</button>
+
+            <div class="divider"><span>OR</span></div>
+
+            <button class="btn-outline full-width" (click)="onRegister.emit('customer')">Create New Account</button>
+        </div>
+    </div>
+
+    <!-- Right Side: Card Showcase (70%) -->
+    <div class="hero-right">
+        <div class="showcase-content">
+            <h1 class="glow-text">Elevate Your Finances</h1>
+            <p class="showcase-desc">Discover the perfect card for your lifestyle. From neon speed to prestige status.
+            </p>
+
+            <div class="cards-scroller">
+                <div class="showcase-card prestige">
+                    <div class="card-inner glass">
+                        <div class="card-chip"></div>
+                        <div class="card-type">PRESTIGE</div>
+                        <div class="card-feature">Unlimited Rewards & Global Access</div>
+                    </div>
+                </div>
+
+                <div class="showcase-card neon">
+                    <div class="card-inner glass">
+                        <div class="card-chip"></div>
+                        <div class="card-type">NEON</div>
+                        <div class="card-feature">Zero Fees & Instant Cashback</div>
+                    </div>
+                </div>
+
+                <div class="showcase-card classic">
+                    <div class="card-inner glass">
+                        <div class="card-chip"></div>
+                        <div class="card-type">CLASSIC</div>
+                        <div class="card-feature">Essential Security & Seamless Payments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="info-section">
+    <div class="section-container">
+        <h2 class="section-title">Stellar Services</h2>
+        <div class="info-grid">
+            <div class="info-card glass">
+                <h3>Secure Storage</h3>
+                <p>Your assets are protected by industry-leading encryption and multi-sig security protocols.</p>
+            </div>
+            <div class="info-card glass">
+                <h3>Instant Issuance</h3>
+                <p>Get your virtual card in seconds and start spending immediately with Apple Pay or Google Pay.</p>
+            </div>
+            <div class="info-card glass">
+                <h3>Global Transfers</h3>
+                <p>Send money anywhere in the world with zero hidden fees and competitive exchange rates.</p>
+            </div>
+        </div>
+    </div>
+</section>

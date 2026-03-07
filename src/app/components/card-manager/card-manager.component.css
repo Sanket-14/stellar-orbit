@@ -1,0 +1,78 @@
+.card-manager {
+    margin-top: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.bank-card {
+    height: 200px;
+    position: relative;
+}
+
+.card-inner {
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+
+.chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    border-radius: 4px;
+}
+
+.number {
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+    font-family: 'Courier New', monospace;
+    margin: 1rem 0;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-group span {
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+}
+
+.label-group p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card-brand {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-weight: 800;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.empty-state {
+    padding: 3rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
