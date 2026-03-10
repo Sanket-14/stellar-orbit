@@ -14,6 +14,13 @@
 
     <app-dashboard *ngIf="currentUser()"></app-dashboard>
 
+    <form>
+        <input type="text" [(ngModel)]="text" name="text">
+        <!-- <input type="button" value="Submit "> -->
+    </form>
+
+    <!-- <h1>{{text}}</h1> -->
+
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -25,6 +32,9 @@
             </div>
         </div>
     </footer>
+
+    <app-test [message]="text"></app-test>
+    <app-counter></app-counter>
 
     <router-outlet></router-outlet>
 </div>
