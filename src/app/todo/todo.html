@@ -1,0 +1,12 @@
+<p>todo works!</p>
+
+<input type="text" #todoInput />
+<button (click)="addTodo(todoInput.value)">Add</button>
+
+<ul>
+    <li *ngFor="let todo of todos">
+        {{todo}}
+        <button (click)="removeTodo(todo)">Remove</button>
+    </li>
+
+</ul>
